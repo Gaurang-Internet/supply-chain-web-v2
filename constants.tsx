@@ -111,7 +111,7 @@ export const MOCK_ARTICLES: Article[] = [
     impactRating: ImpactRating.HIGH,
     signalScore: 89,
     sectors: ['Chemicals', 'Energy'],
-    imageUrl: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=800&auto=format&fit=crop',
     entities: [{ name: 'BASF', type: 'COMPANY' }, { name: 'Ludwigshafen', type: 'LOCATION' }],
     whyItMatters: 'Chemical precursors are the foundational "hidden" bottleneck for global manufacturing.',
     analysisTrigger: 'Upstream supply chain failure at the world\'s largest integrated chemical site.',
