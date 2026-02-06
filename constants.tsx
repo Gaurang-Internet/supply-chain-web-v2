@@ -128,7 +128,7 @@ export const MOCK_ARTICLES: Article[] = [
     impactRating: ImpactRating.MEDIUM,
     signalScore: 78,
     sectors: ['Cold Chain', 'Logistics', 'Pharma'],
-    imageUrl: 'https://images.unsplash.com/photo-1582719201913-b73ca0fed3c0?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop',
     entities: [{ name: 'DHL Express', type: 'COMPANY' }],
     whyItMatters: 'Biologics represent 40% of future pharma value, all requiring non-break cold chains.',
     analysisTrigger: 'Major drug approvals triggering a shift in global specialized freight requirements.',
