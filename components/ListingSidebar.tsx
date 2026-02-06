@@ -13,11 +13,11 @@ interface ListingSidebarProps {
   onPersonSelect: (person: string) => void;
 }
 
-const ListingSidebar: React.FC<ListingSidebarProps> = ({ 
-  articles, 
-  companies, 
-  people, 
-  onNavigate, 
+const ListingSidebar: React.FC<ListingSidebarProps> = ({
+  articles,
+  companies,
+  people,
+  onNavigate,
   onSectorSelect,
   onCompanySelect,
   onPersonSelect
@@ -40,7 +40,7 @@ const ListingSidebar: React.FC<ListingSidebarProps> = ({
         <div className="h-[1px] w-full bg-gray-100"></div>
       </div>
       {onCtaClick && ctaText && (
-        <button 
+        <button
           onClick={onCtaClick}
           className="text-[10px] font-bold text-blue-600 hover:text-black uppercase tracking-widest whitespace-nowrap transition-colors flex items-center gap-1 shrink-0"
         >
@@ -64,11 +64,10 @@ const ListingSidebar: React.FC<ListingSidebarProps> = ({
                   {story.headline}
                 </h4>
                 <div className="flex items-center gap-2">
-                  <span className={`text-[9px] font-black px-1.5 py-0.5 border rounded-sm ${
-                    story.impactRating === ImpactRating.HIGH ? 'bg-red-50 text-red-600 border-red-100' : 
-                    story.impactRating === ImpactRating.MEDIUM ? 'bg-orange-50 text-orange-600 border-orange-100' : 
-                    'bg-blue-50 text-blue-600 border-blue-100'
-                  }`}>
+                  <span className={`text-[9px] font-black px-1.5 py-0.5 border rounded-sm ${story.impactRating === ImpactRating.HIGH ? 'bg-red-50 text-red-600 border-red-100' :
+                      story.impactRating === ImpactRating.MEDIUM ? 'bg-orange-50 text-orange-600 border-orange-100' :
+                        'bg-blue-50 text-blue-600 border-blue-100'
+                    }`}>
                     {story.impactRating}
                   </span>
                   <span className="text-[9px] font-bold uppercase tracking-widest text-gray-400">{story.sectors[0]}</span>
@@ -103,15 +102,15 @@ const ListingSidebar: React.FC<ListingSidebarProps> = ({
 
       {/* Explore Sectors */}
       <section>
-        <SectionHeader 
-          title="Explore Sectors" 
-          onCtaClick={() => onSectorSelect('All')} 
-          ctaText="View All" 
+        <SectionHeader
+          title="Explore Sectors"
+        /* onCtaClick={() => onSectorSelect('All')} 
+        ctaText="View All" */
         />
         <div className="flex flex-wrap gap-2">
           {sectors.map(s => (
-            <button 
-              key={s} 
+            <button
+              key={s}
               onClick={() => onSectorSelect(s)}
               className="px-3 py-1.5 bg-gray-100 hover:bg-gray-200 text-[10px] font-bold text-gray-600 rounded-sm transition-colors uppercase tracking-widest border border-transparent hover:border-gray-300"
             >
@@ -123,15 +122,15 @@ const ListingSidebar: React.FC<ListingSidebarProps> = ({
 
       {/* Companies Redesign - 2 Column Grid */}
       <section>
-        <SectionHeader 
-          title="Recently Covered" 
-          onCtaClick={() => onCompanySelect('All')} 
-          ctaText="View all" 
+        <SectionHeader
+          title="Recently Covered"
+        /* onCtaClick={() => onCompanySelect('All')} 
+        ctaText="View all" */
         />
         <div className="grid grid-cols-2 gap-x-6 gap-y-6">
           {companies.slice(0, 6).map((company) => (
-            <div 
-              key={company.id} 
+            <div
+              key={company.id}
               className="group cursor-pointer flex flex-col gap-1 border-l-2 border-transparent hover:border-blue-600 pl-3 transition-all"
               onClick={() => onCompanySelect(company.name)}
             >
@@ -146,15 +145,15 @@ const ListingSidebar: React.FC<ListingSidebarProps> = ({
 
       {/* People Redesign - 2 Column Grid */}
       <section>
-        <SectionHeader 
-          title="People in the news" 
-          onCtaClick={() => onPersonSelect('All')} 
-          ctaText="View all" 
+        <SectionHeader
+          title="People in the news"
+        /* onCtaClick={() => onPersonSelect('All')} 
+        ctaText="View all" */
         />
         <div className="grid grid-cols-2 gap-x-6 gap-y-6">
           {people.slice(0, 6).map((person) => (
-            <div 
-              key={person.id} 
+            <div
+              key={person.id}
               className="group cursor-pointer flex flex-col gap-1 border-l-2 border-transparent hover:border-orange-500 pl-3 transition-all"
               onClick={() => onPersonSelect(person.name)}
             >
@@ -173,9 +172,9 @@ const ListingSidebar: React.FC<ListingSidebarProps> = ({
           Stay updated on the key logistics, trade, and technology shifts shaping supply chains.
         </p>
         <div className="space-y-3">
-          <input 
-            type="email" 
-            placeholder="your@email.com" 
+          <input
+            type="email"
+            placeholder="your@email.com"
             className="w-full bg-white text-gray-900 px-4 py-3 text-sm rounded-sm outline-none focus:ring-2 focus:ring-orange-400 transition-all border-none"
           />
           <button className="w-full bg-[#f6a01b] hover:bg-[#e08f15] text-white font-bold py-3 text-[13px] uppercase tracking-widest transition-colors shadow-lg active:scale-95">

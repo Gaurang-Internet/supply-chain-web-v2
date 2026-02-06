@@ -163,12 +163,12 @@ export const ExploreSectors: React.FC<{
             Sectors in Focus
           </h2>
         </div>
-        <button
+        {/* <button
           onClick={() => onSectorSelect('All')}
           className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-blue-700 transition-all flex items-center gap-2 group border-b-2 border-transparent hover:border-blue-700 pb-2"
         >
           Browse All Sectors <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-        </button>
+        </button> */}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-gray-100">
@@ -238,12 +238,12 @@ export const ExploreSectors: React.FC<{
                       </div>
                     ))}
 
-                    <button
+                    {/* <button
                       onClick={() => onSectorSelect(sectorName)}
                       className="mt-2 text-[11px] font-black uppercase tracking-widest text-blue-600 hover:text-black flex items-center gap-2 transition-colors border-t border-gray-50 pt-4"
                     >
                       View all <ArrowRight size={12} />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ) : (
@@ -290,12 +290,12 @@ export const CompanyCoverageGrid: React.FC<{
         <h3 className="text-3xl font-serif font-bold text-gray-900">
           Recently Covered Companies
         </h3>
-        <button
+        {/* <button
           onClick={() => onCompanySelect('All')}
           className="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-black flex items-center gap-1 group"
         >
           All Companies <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-        </button>
+        </button> */}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-16">
         {activeCompanies.map(company => {
@@ -355,32 +355,20 @@ export const PeopleSlider: React.FC<{
     <section className="py-24 border-y border-gray-100 bg-[#f9f9f9] -mx-8 px-8 overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-8">
-          <div className="flex items-center gap-8">
-            <h3 className="text-[13px] font-bold uppercase tracking-[0.2em] text-gray-600 font-serif whitespace-nowrap">
-              PEOPLE IN THE NEWS
-            </h3>
-            <div className="flex gap-2">
-              <button
-                onClick={() => scroll('left')}
-                className="p-3 bg-white border border-gray-100 hover:border-blue-600 transition-all rounded-full shadow-sm text-gray-400 hover:text-blue-600 active:scale-90"
-              >
-                <ChevronLeft size={18} />
-              </button>
-              <button
-                onClick={() => scroll('right')}
-                className="p-3 bg-white border border-gray-100 hover:border-blue-600 transition-all rounded-full shadow-sm text-gray-400 hover:text-blue-600 active:scale-90"
-              >
-                <ChevronRight size={18} />
-              </button>
-            </div>
+          <div className="flex gap-2">
+            <button
+              onClick={() => scroll('left')}
+              className="p-3 bg-white border border-gray-100 hover:border-blue-600 transition-all rounded-full shadow-sm text-gray-400 hover:text-blue-600 active:scale-90"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              className="p-3 bg-white border border-gray-100 hover:border-blue-600 transition-all rounded-full shadow-sm text-gray-400 hover:text-blue-600 active:scale-90"
+            >
+              <ChevronRight size={18} />
+            </button>
           </div>
-
-          <button
-            onClick={() => onPersonSelect('All')}
-            className="text-[11px] font-black text-gray-400 hover:text-blue-700 flex items-center gap-3 transition-colors uppercase tracking-[0.2em] group border-b border-transparent hover:border-blue-700 pb-1 self-start md:self-center"
-          >
-            All People <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-          </button>
         </div>
 
         <div
